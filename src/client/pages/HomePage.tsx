@@ -3,6 +3,18 @@ import { useState } from 'react';
 import { ThemeToggle } from '@/client/components/ThemeToggle';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 
+// Define types for the ExperienceItem component
+interface ExperienceItemProps {
+  title: string;
+  position: string;
+  timespan: string;
+  description?: string;
+  details?: string[];
+  borderColor: string;
+  url?: string;
+  imageURL?: string;
+}
+
 // Generic ExperienceItem component for collapsible entries
 function ExperienceItem({
   title,
@@ -13,18 +25,18 @@ function ExperienceItem({
   borderColor,
   url,
   imageURL
-}) {
+}: ExperienceItemProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className={`border-l-4 ${borderColor} pl-6`}>
-      <div className="flex items-start justify-between mb-2">
+    <div className={`border-l-4 ${borderColor} pl-3 sm:pl-6`}>
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-0 mb-2">
         <div className="flex-1">
           <div className='flex items-center gap-2 mb-2'>
             {imageURL && (
-              <img src={imageURL} alt={title} className="w-6 h-6 object-contain rounded " />
+              <img src={imageURL} alt={title} className="w-5 h-5 sm:w-6 sm:h-6 object-contain rounded" />
             )}
-            <h3 className="text-xl font-semibold text-theme-primary">
+            <h3 className="text-lg sm:text-xl font-semibold text-theme-primary">
               {url ? (
                 <a href={url} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
                   {title}
@@ -35,13 +47,13 @@ function ExperienceItem({
             </h3>
           </div>
 
-          <p className="text-lg text-theme-secondary">{position}</p>
+          <p className="text-base sm:text-lg text-theme-secondary">{position}</p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
           <span className="text-sm text-theme-secondary whitespace-nowrap">{timespan}</span>
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center gap-1 text-sm text-theme-secondary hover:text-theme-primary transition-colors duration-200 bg-theme-card hover:bg-theme-hover px-3 py-1 rounded-md border border-theme-border"
+            className="flex items-center justify-center gap-1 text-sm text-theme-secondary hover:text-theme-primary transition-colors duration-200 bg-theme-card hover:bg-theme-hover px-3 py-2 rounded-md border border-theme-border w-full sm:w-auto"
           >
             <span>{isExpanded ? 'Show less' : 'Show more'}</span>
             {isExpanded ? (
@@ -58,10 +70,10 @@ function ExperienceItem({
         }`}>
         <div className="pt-3 pb-1">
           {description && (
-            <p className="text-theme-secondary mb-3">{description}</p>
+            <p className="text-theme-secondary mb-3 text-sm sm:text-base">{description}</p>
           )}
           {details && (
-            <ul className="list-disc list-inside space-y-1 text-theme-secondary ml-4">
+            <ul className="list-disc list-inside space-y-1 text-theme-secondary ml-2 sm:ml-4 text-sm sm:text-base">
               {details.map((detail, index) => (
                 <li key={index} dangerouslySetInnerHTML={{ __html: detail }} />
               ))}
@@ -158,7 +170,7 @@ export default function HomePage() {
       ],
       borderColor: "border-pink-500",
       url: "https://lecturenotes.in/",
-      imageURL: "https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F0d75d5aa-3d37-4c3e-adca-a424c1c4f04d%2Flecturenotes_logo.jpg?table=block&id=8abaeed6-6422-40d2-8559-03d74f585143&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2"
+      imageURL: "https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F0d75d5aa-3d37-4e3e-adca-a424c1c4f04d%2Flecturenotes_logo.jpg?table=block&id=8abaeed6-6422-40d2-8559-03d74f585143&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2"
     },
     {
       title: "Audifie",
@@ -182,7 +194,7 @@ export default function HomePage() {
       ],
       borderColor: "border-teal-500",
       url: "https://www.linkedin.com/company/collegeshala-edutech/",
-      imageURL: "https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F70cacff9-13ce-4393-b21d-b7cfece130c5%2FCS.jpg?table=block&id=550bcb3b-b13f-4b2a-ae5d-0d84388692f9&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2"
+      imageURL: "https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F70cacff9-13ce-4393-b21d-b7cfece130c5%2FCS.jpg?table=block&id=550bc3b-b13f-4b2a-ae5d-0d84388692f9&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2"
     },
     {
       title: "Wholmeal",
@@ -282,16 +294,16 @@ export default function HomePage() {
     <div className="min-h-screen bg-theme-primary transition-colors duration-300">
       <ThemeToggle />
 
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-5xl font-bold text-theme-primary mb-6">MD Fazal Mustafa</h1>
+        <div className="mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-theme-primary mb-4 sm:mb-6">MD Fazal Mustafa</h1>
         </div>
 
         {/* About Me Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-theme-primary mb-6">About me:</h2>
-          <div className="space-y-4 text-theme-secondary leading-relaxed">
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-semibold text-theme-primary mb-4 sm:mb-6">About me:</h2>
+          <div className="space-y-3 sm:space-y-4 text-theme-secondary leading-relaxed text-sm sm:text-base">
             <p>Born in Hazaribagh, grew up in Calcutta.</p>
             <p>Went to 3 different schools, from Co-ed to all boys, thus have seen both worlds.</p>
             <p>Studied Engineering, coz I love tinkering with stuff.</p>
@@ -301,15 +313,15 @@ export default function HomePage() {
             <p>Building Products, AI & growth is where I thrive.</p>
             <p>Research work - coming soon.</p>
             <p>Find my writings here - <a href="https://fazalai.substack.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Substack</a></p>
-            <p>Connect with me - <a href="mailto:contact@fazalmustafa.com" className="text-blue-600 hover:text-blue-800 underline">Email</a> <a href="https://linkedin.com/in/fazalmustafa" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Linkedin</a> <a href="https://twitter.com/fazalmustafa" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Twitter</a></p>
+            <p className="break-words">Connect with me - <a href="mailto:contact@fazalmustafa.com" className="text-blue-600 hover:text-blue-800 underline">Email</a> <a href="https://linkedin.com/in/fazalmustafa" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Linkedin</a> <a href="https://twitter.com/fazalmustafa" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Twitter</a></p>
           </div>
         </section>
 
         {/* Work Experience Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-theme-primary mb-6">Work Experience</h2>
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-semibold text-theme-primary mb-4 sm:mb-6">Work Experience</h2>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {workExperiences.map((experience, index) => (
               <ExperienceItem
                 key={index}
@@ -334,10 +346,10 @@ export default function HomePage() {
         </section> */}
 
         {/* DevRel Experience Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-theme-primary mb-6">DevRel Experience</h2>
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-semibold text-theme-primary mb-4 sm:mb-6">DevRel Experience</h2>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {devrelExperiences.map((experience, index) => (
               <ExperienceItem
                 key={index}
@@ -353,57 +365,58 @@ export default function HomePage() {
         </section>
 
         {/* Feature in Media Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-theme-primary mb-6">Feature in Media</h2>
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-semibold text-theme-primary mb-4 sm:mb-6">Feature in Media</h2>
 
           <div className="space-y-4">
             <div>
               <div className='flex items-center gap-2 mb-2'>
-                <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2Fc1f9d618-8592-4029-8d4b-b6358166753f%2Funnamed_(1).png?table=block&id=47a7b0f0-7566-4f17-8491-b727fac553c8&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-8 h-8 object-contain rounded' />
-                <h3 className="text-lg font-semibold text-theme-primary">Yourstory</h3>
+                <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2Fc1f9d618-8592-4029-8d4b-b6358166753f%2Funnamed_(1).png?table=block&id=47a7b0f0-7566-4f17-8491-b727fac553c8&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-6 h-6 sm:w-8 sm:h-8 object-contain rounded' />
+                <h3 className="text-base sm:text-lg font-semibold text-theme-primary">Yourstory</h3>
               </div>
 
-              <p className="text-theme-secondary mb-2">Collegeshala was featured in our seed round of $250K.</p>
-              <a href="https://yourstory.com/companies/collegeshala" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">https://yourstory.com/companies/collegeshala</a>
+              <p className="text-theme-secondary mb-2 text-sm sm:text-base">Collegeshala was featured in our seed round of $250K.</p>
+              <a href="https://yourstory.com/companies/collegeshala" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline text-sm sm:text-base break-all">https://yourstory.com/companies/collegeshala</a>
             </div>
 
             <div>
               <div className='flex items-center gap-2 mb-2'>
-                <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F7a4f6fd8-4cbb-437d-9200-57e625692c6d%2F2141.png?table=block&id=e8a5dffc-7542-4a37-ab62-ced082938216&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-8 h-8 object-contain rounded' />
-                <h3 className='text-lg font-semibold text-theme-primary'>Inc</h3>
+                <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F7a4f6fd8-4cbb-437d-9200-57e625692c6d%2F2141.png?table=block&id=e8a5dffc-7542-4a37-ab62-ced082938216&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-6 h-6 sm:w-8 sm:h-8 object-contain rounded' />
+                <h3 className='text-base sm:text-lg font-semibold text-theme-primary'>Inc</h3>
               </div>
-              <p className="text-theme-secondary mb-2">Collegeshala getting acquired by Lecturenotes.</p>
-              <a href="https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/</a>
+              <p className="text-theme-secondary mb-2 text-sm sm:text-base">Collegeshala getting acquired by Lecturenotes.</p>
+              <a href="https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline text-sm sm:text-base break-all">https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/</a>
             </div>
 
             <div>
               <div className='flex items-center gap-2 mb-2'>
-                <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F819d2305-e028-47a8-8c49-1961389a57b3%2Fdownload_(1).png?table=block&id=1d7c1277-4186-4bc7-bef9-e971b4b42dab&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-8 h-8 object-contain rounded' />
+                <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F819d2305-e028-47a8-8c49-1961389a57b3%2Fdownload_(1).png?table=block&id=1d7c1277-4186-4bc7-bef9-e971b4b42dab&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-6 h-6 sm:w-8 sm:h-8 object-contain rounded' />
 
-                <h3 className="text-lg font-semibold text-theme-primary">Entrackr</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-theme-primary">Entrackr</h3>
               </div>
-              <p className="text-theme-secondary mb-2">When we raised a $2.5 Million Pre-Series round for Lecturenotes.</p>
-              <a href="https://entrackr.com/2022/03/lecturenotes-raises-2-5-mn-in-pre-series-a-round/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">https://entrackr.com/2022/03/lecturenotes-raises-2-5-mn-in-pre-series-a-round/</a>
+              <p className="text-theme-secondary mb-2 text-sm sm:text-base">When we raised a $2.5 Million Pre-Series round for Lecturenotes.</p>
+              <a href="https://entrackr.com/2022/03/lecturenotes-raises-2-5-mn-in-pre-series-a-round/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline text-sm sm:text-base break-all">https://entrackr.com/2022/03/lecturenotes-raises-2-5-mn-in-pre-series-a-round/</a>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-theme-primary mb-6">Contact</h2>
-          <p className="text-theme-secondary">I am mostly active on Email, Twitter, and Linkedin. Email is preferred but I do respond to DMs quickly.</p>
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-semibold text-theme-primary mb-4 sm:mb-6">Contact</h2>
+          <p className="text-theme-secondary text-sm sm:text-base">I am mostly active on Email, Twitter, and Linkedin. Email is preferred but I do respond to DMs quickly.</p>
         </section>
 
         {/* SubStack Embed Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-theme-primary mb-6">SubStack</h2>
-          <div className="bg-theme-card border border-theme-card rounded-lg p-6">
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-semibold text-theme-primary mb-4 sm:mb-6">SubStack</h2>
+          <div className="bg-theme-card border border-theme-card rounded-lg p-4 sm:p-6">
             <iframe
               src="https://fazalai.substack.com/embed"
               width="100%"
-              height="400"
+              height="300"
               style={{ border: 'none' }}
               title="SubStack Embed"
+              className="sm:h-[400px]"
             />
           </div>
         </section>
