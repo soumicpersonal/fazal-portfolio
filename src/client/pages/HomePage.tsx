@@ -217,56 +217,64 @@ export default function HomePage() {
       position: "",
       timespan: "2020 - 2021",
       description: "I started the Google Developer Student Club at my College Campus and grew the community from 0 to 1500+ members. I built a core team of 8 to 10 folks and we executed 30+events, 2 Mini-Hackathons & 4 Programs.",
-      borderColor: "border-blue-500"
+      borderColor: "border-blue-500",
+      imageURL: "https://mdfazal.notion.site/image/attachment%3A1ddc4462-0dc8-4d83-ac39-624b245bfce0%3Aimages.png?table=block&id=1bc355ae-6ea1-80f4-a52b-cf4457c02375&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&userId=&cache=v2"
     },
     {
       title: "Google Cloud Facilitator - Program Lead",
       position: "",
       timespan: "2022",
       description: "I was the Google Cloud Facilitator of my City and had to train at least 50 students on GCP. All the trainings were sucessfully finished by me and all the students received their completion badge.",
-      borderColor: "border-green-500"
+      borderColor: "border-green-500",
+      imageURL:"https://mdfazal.notion.site/image/attachment%3A76e25959-864b-4601-9bbe-f397e2381713%3A1650292030943.jpg?table=block&id=1bc355ae-6ea1-8048-84a9-d5aeacee84c6&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&userId=&cache=v2"
     },
     {
       title: "Facebook Developer Circle - Core member",
       position: "",
       timespan: "2021",
       description: "I was the core member of the Facebook Developer Circle under the Lead Sabhyasachi Mukopadhyay. We built the community of 500+ strong developers learning Pytorch and other Meta technologies.",
-      borderColor: "border-purple-500"
+      borderColor: "border-purple-500",
+      imageURL:"https://mdfazal.notion.site/image/attachment%3A5d6420e4-4587-41da-bf16-163435aa4e2d%3Adevelopercirclesfromfacebook_logo.jpg?table=block&id=1bc355ae-6ea1-8097-a64f-dc3d51927dd0&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&userId=&cache=v2"
     },
     {
       title: "Google Developer Group, Kolkata - Core member",
       position: "",
       timespan: "2019 - 2022",
       description: "I was a core member at GDG Kolkata, which was led by Rivu Das and Indranil Dutta. We built this community over three years and expanded it to 40,000+ developers from 100+ companies and 30+ colleges in the city. At GDG we conduct sessions and workshops on Android, Dart, Flutter, Tensorflow (ML), AR, and Web development. Hands-on session is done and one-on-one guidance is given to students who face difficulty in learning or if they are stuck at some bugs.",
-      borderColor: "border-orange-500"
+      borderColor: "border-orange-500",
+      imageURL:"https://mdfazal.notion.site/image/attachment%3A3cfcff19-98b1-4439-a036-9a32f47a27bc%3Aimages_(1).png?table=block&id=1bc355ae-6ea1-80d4-a08d-d6ff77f425c5&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&userId=&cache=v2"
     },
     {
       title: "AWS User Group, Kolkata - Core member",
       position: "",
       timespan: "2019 - 2021",
       description: "I was a core member at AWS user Group Kolkata, wherein we built a community of 8000+ developers and also organised AWS' flagship event AWS Community Day in Kolkata. We trained all of these developers across 20+ AWS services like AWS EC2, S3, DynamoDB etc.",
-      borderColor: "border-red-500"
+      borderColor: "border-red-500",
+      imageURL:"https://mdfazal.notion.site/image/attachment%3A04043df4-d0d5-4fbd-a3c1-28a877610411%3Aimages_(2).png?table=block&id=1bc355ae-6ea1-8076-81ec-e1b42697f213&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&userId=&cache=v2"
     },
     {
       title: "Cloud Native Computing Foundation User Group, Kolkata - Co-Founder",
       position: "",
       timespan: "2019 - 2021",
       description: "I along with Chirag Nayyar started the CNCF Chapter for Kolkata, very quickly we grew it to 3000+ members. We conducted 20+ sessions on Azure, AWS, Kubernetes, Docker etc.",
-      borderColor: "border-indigo-500"
+      borderColor: "border-indigo-500",
+      imageURL:"https://mdfazal.notion.site/image/attachment%3A8936e379-8bb0-49cc-81b8-a55873aa984a%3Acncfugkol_logo.jpg?table=block&id=1bc355ae-6ea1-8027-9993-d25cbd8ad3c9&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&userId=&cache=v2"
     },
     {
       title: "Pie & AI by Deeplearning.ai - Ambassador",
       position: "",
       timespan: "2020 - 2021",
       description: "When Deeplearning AI Community came to Kolkata to open their chapter \"Pie & AI\" for this city, almost 300+ undergrad students applied to be their ambassador. I was choosen out of them to lead the chapter for the city. Under my leadership we executed 15 sessions with 10 of the speakers from overseas and 3 learning tracks. We truly helped 3000+ students to upskill in AI.",
-      borderColor: "border-pink-500"
+      borderColor: "border-pink-500",
+      imageURL:"https://mdfazal.notion.site/image/attachment%3A4a660c10-16c1-4a19-bda6-e37c2b7ebff4%3Aimages.jpg?table=block&id=1bc355ae-6ea1-8015-85aa-ca60e016fd70&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&userId=&cache=v2"
     },
     {
       title: "Lecturenotes Campus Ambassador Program - Co-Founder",
       position: "",
       timespan: "2022 - 2023",
       description: "At Lecturenotes our team built an ambassador program spanning to 1500+ Engineering Campuses in India giving us access to 3 Million Engineering Students pursuing B.Tech.",
-      borderColor: "border-yellow-500"
+      borderColor: "border-yellow-500",
+      imageURL:"https://mdfazal.notion.site/image/attachment%3A97afc72c-f409-4eff-8d2b-ef44dbe89c7a%3Alecturenotes_logo.jpg?table=block&id=1bc355ae-6ea1-8078-b54a-c23a5d7f8526&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&userId=&cache=v2"
     }
   ];
 
@@ -339,7 +347,7 @@ export default function HomePage() {
                 description={experience.description}
                 details={undefined}
                 borderColor={experience.borderColor}
-                url={undefined} imageURL={undefined} />
+                url={undefined} imageURL={experience.imageURL} />
             ))}
           </div>
         </section>
@@ -362,7 +370,7 @@ export default function HomePage() {
             <div>
               <div className='flex items-center gap-2 mb-2'>
                 <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F7a4f6fd8-4cbb-437d-9200-57e625692c6d%2F2141.png?table=block&id=e8a5dffc-7542-4a37-ab62-ced082938216&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-8 h-8 object-contain rounded' />
-<h3 className='text-lg font-semibold text-theme-primary'>Inc</h3>
+                <h3 className='text-lg font-semibold text-theme-primary'>Inc</h3>
               </div>
               <p className="text-theme-secondary mb-2">Collegeshala getting acquired by Lecturenotes.</p>
               <a href="https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/</a>
