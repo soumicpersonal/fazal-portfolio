@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #f0eee6;
+  --text-primary: #1f1e1d;
+  --text-secondary: #4b5563;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1f1e1d;
+  --text-primary: #f0eee6;
+  --text-secondary: #d1d5db;
+  --card-bg: #2d2c2b;
+  --card-border: #404040;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom utility classes for theme-aware backgrounds and text */
+.bg-theme-primary {
+  background-color: var(--bg-primary);
+}
+
+.text-theme-primary {
+  color: var(--text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-theme-card {
+  background-color: var(--card-bg);
+}
+
+.border-theme-card {
+  border-color: var(--card-border);
+}
