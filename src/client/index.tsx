@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { renderApp } from 'modelence/client';
+import ReactDOM from 'react-dom/client';
 import { toast } from 'react-hot-toast';
 import { RouterProvider } from 'react-router-dom';
 
@@ -9,18 +9,20 @@ import './index.css';
 import LoadingSpinner from './components/LoadingSpinner';
 import { ThemeProvider } from './components/ThemeProvider';
 
-renderApp({
-  routesElement: (
-    <ThemeProvider>
-      <Suspense fallback={<LoadingSpinner fullScreen />}>
-        <RouterProvider router={router} />
-      </Suspense>
-    </ThemeProvider>
-  ),
-  errorHandler: (error) => {
-    toast.error(error.message);
-  },
-  loadingElement: <LoadingSpinner fullScreen />,
-  favicon
-});
+// Set favicon
+const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+link.type = 'image/svg+xml';
+link.rel = 'icon';
+link.href = favicon;
+document.getElementsByTagName('head')[0].appendChild(link);
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
+  <ThemeProvider>
+    <Suspense fallback={<LoadingSpinner fullScreen />}>
+      <RouterProvider router={router} />
+    </Suspense>
+  </ThemeProvider>
+);
 
