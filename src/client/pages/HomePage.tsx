@@ -30,7 +30,7 @@ function ExperienceItem({
 
   return (
     <div className={`border-l-4 ${borderColor} pl-3 sm:pl-6`}>
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-0 mb-2">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-0 mb-3">
         <div className="flex-1">
           <div className='flex items-center gap-2 mb-2'>
             {imageURL && (
@@ -51,33 +51,55 @@ function ExperienceItem({
         </div>
         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
           <span className="text-sm text-theme-secondary whitespace-nowrap font-mono">{timespan}</span>
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center justify-center gap-1 text-sm text-theme-secondary hover:text-theme-primary transition-colors duration-200 bg-theme-card hover:bg-theme-hover px-3 py-2 rounded-md border border-theme-border w-full sm:w-auto"
-          >
-            <span>{isExpanded ? 'Show less' : 'Show more'}</span>
+        </div>
+      </div>
+
+      {(details || description) && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="flex items-center gap-1 text-sm text-theme-secondary hover:text-theme-primary transition-all duration-200 mb-3 group"
+        >
+          <span>{isExpanded ? 'Show less' : 'Show more'}</span>
+          <div className="transition-transform duration-200 ease-in-out">
             {isExpanded ? (
               <ChevronUpIcon className="w-4 h-4" />
             ) : (
               <ChevronDownIcon className="w-4 h-4" />
             )}
-          </button>
-        </div>
-      </div>
+          </div>
+        </button>
+      )}
 
-      {/* Collapsible Content */}
-      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-        }`}>
-        <div className="pt-3 pb-1">
+      {/* Collapsible Content with Fade Effect */}
+      <div
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded
+          ? 'max-h-[2000px] opacity-100 transform translate-y-0'
+          : 'max-h-0 opacity-0 transform -translate-y-2'
+          }`}
+      >
+        <div className="pb-3 space-y-3">
           {description && (
-            <p className="text-theme-secondary mb-3 text-sm sm:text-base font-body">{description}</p>
+            <div className={`transition-all duration-300 delay-100 ${isExpanded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-2'
+              }`}>
+              <p className="text-theme-secondary text-sm sm:text-base font-body leading-relaxed">
+                {description}
+              </p>
+            </div>
           )}
+
           {details && (
-            <ul className="list-disc list-inside space-y-1 text-theme-secondary ml-2 sm:ml-4 text-sm sm:text-base font-body">
-              {details.map((detail, index) => (
-                <li key={index} dangerouslySetInnerHTML={{ __html: detail }} />
-              ))}
-            </ul>
+            <div className={`transition-all duration-300 delay-200 ${isExpanded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-2'
+              }`}>
+              <ul className="list-disc list-inside space-y-2 text-theme-secondary ml-2 sm:ml-4 text-sm sm:text-base font-body">
+                {details.map((detail, index) => (
+                  <li
+                    key={index}
+                    dangerouslySetInnerHTML={{ __html: detail }}
+                    className="leading-relaxed"
+                  />
+                ))}
+              </ul>
+            </div>
           )}
         </div>
       </div>
@@ -386,17 +408,17 @@ export default function HomePage() {
                 <h3 className="text-base sm:text-lg font-semibold text-theme-primary font-display">Yourstory</h3>
               </div>
 
-              <p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">Collegeshala was featured in our seed round of $250K.</p>
-              <a href="https://yourstory.com/companies/collegeshala" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline text-sm sm:text-base break-all font-body">https://yourstory.com/companies/collegeshala</a>
+
+              <a href="https://yourstory.com/companies/collegeshala" target="_blank" rel="noopener noreferrer" className=" underline text-sm sm:text-base break-all font-body"> <p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">Collegeshala was featured in our seed round of $250K.</p></a>
             </div>
 
             <div>
               <div className='flex items-center gap-2 mb-2'>
                 <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F7a4f6fd8-4cbb-437d-9200-57e625692c6d%2F2141.png?table=block&id=e8a5dffc-7542-4a37-ab62-ced082938216&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-6 h-6 sm:w-8 sm:h-8 object-contain rounded' />
-                <h3 className='text-base sm:text-lg font-semibold text-theme-primary font-display'>Inc</h3>
+                <h3 className='text-base sm:text-lg font-semibold text-theme-primary font-display'> Inc 42</h3>
               </div>
-              <p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">Collegeshala getting acquired by Lecturenotes.</p>
-              <a href="https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline text-sm sm:text-base break-all font-body">https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/</a>
+
+              <a href="https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/" target="_blank" rel="noopener noreferrer" className=" underline text-sm sm:text-base break-all font-body"><p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">Collegeshala getting acquired by Lecturenotes.</p></a>
             </div>
 
             <div>
@@ -405,8 +427,8 @@ export default function HomePage() {
 
                 <h3 className="text-base sm:text-lg font-semibold text-theme-primary font-display">Entrackr</h3>
               </div>
-              <p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">When we raised a $2.5 Million Pre-Series round for Lecturenotes.</p>
-              <a href="https://entrackr.com/2022/03/lecturenotes-raises-2-5-mn-in-pre-series-a-round/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline text-sm sm:text-base break-all font-body">https://entrackr.com/2022/03/lecturenotes-raises-2-5-mn-in-pre-series-a-round/</a>
+
+              <a href="https://entrackr.com/2022/03/lecturenotes-raises-2-5-mn-in-pre-series-a-round/" target="_blank" rel="noopener noreferrer" className=" underline text-sm sm:text-base break-all font-body"> <p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">When we raised a $2.5 Million Pre-Series round for Lecturenotes.</p></a>
             </div>
           </div>
         </section>
@@ -414,7 +436,9 @@ export default function HomePage() {
         {/* Contact Section */}
         <section className="mb-12 sm:mb-16">
           <h2 className="text-xl sm:text-2xl font-semibold text-theme-primary mb-4 sm:mb-6 font-display">Contact</h2>
-          <p className="text-theme-secondary text-sm sm:text-base font-body">I am mostly active on Email, Twitter, and Linkedin. Email is preferred but I do respond to DMs quickly.</p>
+          <p className="text-theme-secondary text-sm sm:text-base font-body">
+            I am mostly active on  <a href=" fazal@heva.ai" className='underline'>Email</a>  ,
+            <a href="https://x.com/the_mdfazal  " className='underline'>Twitter</a>, and  <a href="https://www.linkedin.com/in/md-fazal-mustafa-ba5265129/" className='underline'>Linkedin</a> . Email is preferred but I do respond to DMs quickly.</p>
         </section>
 
         {/* SubStack Embed Section */}
