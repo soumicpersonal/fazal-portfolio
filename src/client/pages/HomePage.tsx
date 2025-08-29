@@ -103,9 +103,9 @@ export default function HomePage() {
       timespan: "September 2023 - Ongoing",
       description: "I consulted the following startups:",
       details: [
-        "<strong>Mechanify:</strong> Insuring the 2nd life of EVs",
+        `<strong><a href="https://mechanify.in/" target="_blank" rel="noopener noreferrer" class="underline">Mechanify</a>:</strong> Insuring the 2nd life of EVs`,
         "<strong>Upraised:</strong> AI powered solution to assess talent (Acquired)",
-        "<strong>HexStar Universe:</strong> Full-Stack Space Edtech Platform.",
+        `<strong> <a href="" target="_blank" rel="noopener noreferrer" class="underline"> HexStar Universe </a>:</strong> Full-Stack Space Edtech Platform.`,
         "<strong>Stealth:</strong> Leveraging business data to automate Ops, strategies, etc.",
         "<strong>Stealth:</strong> Innovating Defense for modern combat dynamics."
       ],
@@ -304,14 +304,14 @@ export default function HomePage() {
         <section className="mb-12 sm:mb-16">
           <h2 className="text-xl sm:text-2xl font-semibold text-theme-primary mb-4 sm:mb-6 font-display">About me:</h2>
           <div className="space-y-3 sm:space-y-4 text-theme-secondary leading-relaxed text-sm sm:text-base font-body">
-            <p>Born in Hazaribagh, grew up in Calcutta.</p>
+            <p>Born in <a href="https://www.google.com/search?q=hazaribagh&rlz=1C1UEAD_enIN1172IN1172&oq=ha&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRg5MgoIAhAAGLEDGIAEMgoIAxAuGLEDGIAEMg0IBBAuGNQCGLEDGIAEMgYIBRBFGD0yBggGEEUYPDIGCAcQRRg80gEHOTExajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" className="underline">Hazaribagh</a>, grew up in <a href="https://www.google.com/search?q=calcutta&rlz=1C1UEAD_enIN1172IN1172&oq=calcutta+&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEwgBEC4YrwEYxwEYkQIYgAQYigUyDQgCEAAYgwEYsQMYgAQyBwgDEAAYgAQyCggEEC4YsQMYgAQyBwgFEAAYgAQyDQgGEAAYkQIYgAQYigUyBwgHEAAYgAQyDQgIEAAYkQIYgAQYigUyDQgJEAAYkQIYgAQYigXSAQg1Njg3ajBqOagCBrACAfEFirSiSCwog6LxBYq0okgsKIOi&sourceid=chrome&ie=UTF-8" className='underline'>Calcutta</a> .</p>
             <p>Went to 3 different schools, from Co-ed to all boys, thus have seen both worlds.</p>
             <p>Studied Engineering, coz I love tinkering with stuff.</p>
-            <p>Built & sold 2 companies, 1 failed product & on to my 3rd one now.</p>
-            <p>Consulted 8 companies.</p>
-            <p>Personally, in love with Autonomous systems and robotics since 2019.</p>
+            <p>Built & sold 2 Companies, 1 failed product & on to my 3rd one now.</p>
+            <p>Consulted 8 Companies.</p>
+            <p>Personally, in love with Autonomous systems and Robotics since 2019.</p>
             <p>Building Products, AI & growth is where I thrive.</p>
-            <p>Research work - coming soon.</p>
+            <p>Research work - Coming soon.</p>
             <p>Find my writings here - <a href="https://fazalai.substack.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Substack</a></p>
             <div className="flex items-center flex-wrap gap-3 break-words">
               <span>Connect with me -</span>
