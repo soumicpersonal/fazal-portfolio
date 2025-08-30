@@ -32,24 +32,26 @@ function ExperienceItem({
     <div className={`border-l-4 ${borderColor} pl-3 sm:pl-6`}>
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-0 mb-3">
         <div className="flex-1">
-          <div className='flex items-center gap-2 mb-2'>
+          <div className='flex items-start gap-2 mb-2'>
             {imageURL && (
-              <img src={imageURL} alt={title} className="w-5 h-5 sm:w-6 sm:h-6 object-contain rounded" />
+              <img src={imageURL} alt={title} className="w-5 h-5 sm:w-6 sm:h-6 object-contain rounded flex-shrink-0 mt-0.5" />
             )}
-            <h3 className="text-lg sm:text-xl font-semibold text-theme-primary font-display">
-              {url ? (
-                <a href={url} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-                  {title}
-                </a>
-              ) : (
-                title
-              )}
-            </h3>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg sm:text-xl font-semibold text-theme-primary font-display leading-tight">
+                {url ? (
+                  <a href={url} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+                    {title}
+                  </a>
+                ) : (
+                  title
+                )}
+              </h3>
+            </div>
           </div>
 
-          <p className="text-base sm:text-lg text-theme-secondary font-body">{position}</p>
+          <p className="text-base sm:text-lg text-theme-secondary font-body ml-7 sm:ml-8">{position}</p>
         </div>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 ml-7 sm:ml-0">
           <span className="text-sm text-theme-secondary whitespace-nowrap font-mono">{timespan}</span>
         </div>
       </div>
