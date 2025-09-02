@@ -142,8 +142,8 @@ export default function HomePage() {
       description: "I did independent research work across Neuro, Vision, and Materials:",
       details: [
         "Diagnosing Neurological disorders like Epilepsy, parkinson with just raw EEG data in seconds. We achieve accuracy as high as 99.5%.",
-        "Image Vectorization Using CLIP for Integration with Large Language Models: A Novel Approach to Enhancing Memorization.",
-        "Machine Learning-Driven Prediction and Simulation of Crystalline Structures for Advanced Ballistic Protection."
+        `Image Vectorization Using CLIP for Integration with Large Language Models: A Novel Approach to Enhancing Memorization. <strong><span style="color:#d97706; font-weight:bold; font-size:1.05em;">[ <u>Major Publication Coming Soon</u>]</span></strong>`,
+        `Machine Learning-Driven Prediction and Simulation of Crystalline Structures for Advanced Ballistic Protection. <strong><span style="color:#d97706; font-weight:bold; font-size:1.05em;">[ <u>Major Publication Coming Soon</u>]</span></strong>`
       ],
       borderColor: "border-purple-500"
     },
