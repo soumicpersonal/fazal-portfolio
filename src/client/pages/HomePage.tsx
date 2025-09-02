@@ -408,19 +408,19 @@ export default function HomePage() {
               <div className='flex items-center gap-2 mb-2'>
                 <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2Fc1f9d618-8592-4029-8d4b-b6358166753f%2Funnamed_(1).png?table=block&id=47a7b0f0-7566-4f17-8491-b727fac553c8&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-6 h-6 sm:w-8 sm:h-8 object-contain rounded' />
                 <h3 className="text-base sm:text-lg font-semibold text-theme-primary font-display">Yourstory</h3>
+
+
+                <a href="https://yourstory.com/companies/collegeshala" target="_blank" rel="noopener noreferrer" className=" underline text-sm sm:text-base break-all font-body mt-2"> <p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">Collegeshala was featured in our seed round of $250K.</p></a>
               </div>
-
-
-              <a href="https://yourstory.com/companies/collegeshala" target="_blank" rel="noopener noreferrer" className=" underline text-sm sm:text-base break-all font-body"> <p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">Collegeshala was featured in our seed round of $250K.</p></a>
             </div>
 
             <div>
               <div className='flex items-center gap-2 mb-2'>
                 <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F7a4f6fd8-4cbb-437d-9200-57e625692c6d%2F2141.png?table=block&id=e8a5dffc-7542-4a37-ab62-ced082938216&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-6 h-6 sm:w-8 sm:h-8 object-contain rounded' />
                 <h3 className='text-base sm:text-lg font-semibold text-theme-primary font-display'> Inc 42</h3>
-              </div>
 
-              <a href="https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/" target="_blank" rel="noopener noreferrer" className=" underline text-sm sm:text-base break-all font-body"><p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">Collegeshala getting acquired by Lecturenotes.</p></a>
+                <a href="https://inc42.com/buzz/edtech-startup-lecturenotes-acquires-collegeshala-for-an-undisclosed-amount/" target="_blank" rel="noopener noreferrer" className=" underline text-sm sm:text-base break-all font-body mt-2"><p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">Collegeshala getting acquired by Lecturenotes.</p></a>
+              </div>
             </div>
 
             <div>
@@ -428,9 +428,9 @@ export default function HomePage() {
                 <img src="https://mdfazal.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd5f23efc-cabc-4a6a-b64d-138d0ef7e7d4%2F819d2305-e028-47a8-8c49-1961389a57b3%2Fdownload_(1).png?table=block&id=1d7c1277-4186-4bc7-bef9-e971b4b42dab&spaceId=d5f23efc-cabc-4a6a-b64d-138d0ef7e7d4&width=60&freeze=true&userId=&cache=v2" alt="" className='w-6 h-6 sm:w-8 sm:h-8 object-contain rounded' />
 
                 <h3 className="text-base sm:text-lg font-semibold text-theme-primary font-display">Entrackr</h3>
-              </div>
 
-              <a href="https://entrackr.com/2022/03/lecturenotes-raises-2-5-mn-in-pre-series-a-round/" target="_blank" rel="noopener noreferrer" className=" underline text-sm sm:text-base break-all font-body"> <p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">When we raised a $2.5 Million Pre-Series round for Lecturenotes.</p></a>
+                <a href="https://entrackr.com/2022/03/lecturenotes-raises-2-5-mn-in-pre-series-a-round/" target="_blank" rel="noopener noreferrer" className=" underline text-sm sm:text-base break-all font-body mt-2"> <p className="text-theme-secondary mb-2 text-sm sm:text-base font-body">When we raised a $2.5 Million Pre-Series round for Lecturenotes.</p></a>
+              </div>
             </div>
           </div>
         </section>
